@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if pgrep "arpwatch" >/dev/null
+then
+        echo >/dev/null
+else
+        arpwatch
+fi
+
+if pgrep "perl" >/dev/null
+then
+        exit 0
+else
+        sec -input /var/log/messages -conf /etc/arpwatcher.cfg -detach -log /var/log/arpwatcher-sec.log
+fi
