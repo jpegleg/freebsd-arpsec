@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+pkg install -y sec
+pkg install -y arping
+pkg install -y arpwatch
+pkg install -y bash
+pkg install -y curl
+
+chmod +x arp-api
+cp arp-api /usr/local/sbin/
+
+chmod +x arp-enforce
+cp arp-enforce /usr/local/sbin
+
+chmod +x arp-cycle
+cp arp-cycle /usr/local/sbin/
+
+chmod +x arp-cycle2
+cp arp-cycle2 /usr/local/sbin/
+
+cp arp-watch.cfg /etc/
+
+grep arp-enforce /etc/crontab || echo "*/1 * * * * /usr/local/sbin/arp-enforce >/dev/null 2>&1" >> /etc/crontab
+
+grep arp-api /etc/crontab || echo "*/1 * * * * /usr/local/sbin/arp-api >/dev/null 2>&1" >> /etc/crontab
+
