@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+inputl=($@)
+
+echo "${inputl[*]}" >> /srv/changed-devices.txt
+
+chmod 755 /srv/changed-devices.txt
