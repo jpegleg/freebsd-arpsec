@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for device in {1..255}; do 
+  echo 192.168.1.$device; 
+  arping -w 3 -W 3 -C 4 192.168.1.$device;
+  # add in your own subnets and such
+done
