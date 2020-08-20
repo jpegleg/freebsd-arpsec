@@ -8,3 +8,7 @@ if [ -f /srv/changed-devices.txt ]; then
   curl --connect-timeout 2 -X POST https://api.twilio.com/THINGSHERE/Messages.json --data-urlencode "To=+PHONEHERE" --data-urlencode "From=+PHONEHERE" --data-urlencode "Body=$(cat /srv/facewithmonocle.emoji /srv/changed-devices.txt) $(host $(cat /srv/changed-devices.txt | awk '{print $10}'))" -u APIDATAHERE
   rm -f /srv/changed-devices.txt
 fi
+if [ -f /srv/reused-devices.txt ]; then
+  curl --connect-timeout 2 -X POST https://api.twilio.com/THINGSHERE/Messages.json --data-urlencode "To=+PHONEHERE" --data-urlencode "From=+PHONEHERE" --data-urlencode "Body=$(cat /srv/facewithmonocle.emoji /srv/reused-devices.txt) $(host $(cat /srv/reused-devices.txt | awk '{print $11}'))" -u APIDATAHERE
+  rm -f /srv/reused-devices.txt
+fi
