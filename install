@@ -15,8 +15,14 @@ cp arp-enforce /usr/local/sbin
 chmod +x arp-cycle
 cp arp-cycle /usr/local/sbin/
 
-chmod +x arp-cycle2
-cp arp-cycle2 /usr/local/sbin/
+chmod +x arp-collect1
+cp arp-collect1 /usr/local/sbin/
+
+chmod +x arp-collect2
+cp arp-collect2 /usr/local/sbin/
+
+chmod +x arp-collect3
+cp arp-collect3 /usr/local/sbin/
 
 cp arp-watch.cfg /etc/
 
