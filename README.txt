@@ -13,7 +13,7 @@ sec-2.7.12_1                   Simple event (logs) correlator
 
 Feel free to upgrade those packages, sec 2.8x should work fine.
 
-See https://simple-evcorr.github.io/  and https://github.com/barkerme/arpwatch
+See https://simple-evcorr.github.io/  and https://www.freshports.org/net-mgmt/arpwatch/
 
 
 # setup alert output api
