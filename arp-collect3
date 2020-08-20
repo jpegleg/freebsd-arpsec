@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+inputl=($@)
+
+echo "${inputl[*]}" >> /srv/reused-devices.txt
+
+chmod 755 /srv/reused-devices.txt
