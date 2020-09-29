@@ -24,7 +24,7 @@ cp arp-collect2 /usr/local/sbin/
 chmod +x arp-collect3
 cp arp-collect3 /usr/local/sbin/
 
-cp arp-watch.cfg /etc/
+cp arp-watcher.cfg /etc/
 
 grep arp-enforce /etc/crontab || echo "*/1 * * * * root /usr/local/sbin/arp-enforce >/dev/null 2>&1" >> /etc/crontab
 
